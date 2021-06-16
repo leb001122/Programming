@@ -10,16 +10,6 @@ public class PersonList {
 		personArr = new Person[100];
 	}
 	
-	public Person getPerson(String name)
-	{
-		for(int i = 0; i < size; i++)
-		{
-			if(personArr[i].getName().equals(name))
-				return personArr[i];
-		}
-		return null;
-	}
-	
 	public int search(String name)
 	{
 		for(int i = 0; i < size; i++)
@@ -51,6 +41,16 @@ public class PersonList {
 		personArr[size-1] = null;
 		size--;
 		return 1;
+	}
+	
+	public Person getPerson(String name)
+	{
+		for(int i = 0; i < size; i++)
+		{
+			if(personArr[i].getName().equals(name))
+				return personArr[i];
+		}
+		return null;
 	}
 	
 	public String toString()

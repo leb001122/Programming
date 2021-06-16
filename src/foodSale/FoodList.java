@@ -10,16 +10,6 @@ public class FoodList {
 		foodArr = new Food[100];
 	}
 	
-	public Food getFood(String name)
-	{
-		for(int i = 0; i < size; i++)
-		{
-			if(foodArr[i].getName().equals(name))
-				return foodArr[i];
-		}
-		return null;
-	}
-	
 	public int search(String name)
 	{
 		for(int i = 0; i < size; i++)
@@ -51,6 +41,16 @@ public class FoodList {
 		foodArr[size-1] = null;
 		size--;
 		return 1;
+	}
+	
+	public Food getFood(String name)
+	{
+		for(int i = 0; i < size; i++)
+		{
+			if(foodArr[i].getName().equals(name))
+				return foodArr[i];
+		}
+		return null;
 	}
 	
 	public String toString()
